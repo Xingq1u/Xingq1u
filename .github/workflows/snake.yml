@@ -1,0 +1,33 @@
+name: MUHAMAD KHOIRON's snake animation
+
+on:
+  schedule:
+    - cron: "0 */8 * * *" 
+  
+  workflow_dispatch:
+ 
+  push:
+    branches:
+    - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: generate MUHAMAD KHOIRON-snake.svg
+        uses: Platane/snk/svg-only@v2
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/MUHAMAD KHOIRON-snake-light.svg?palette=github-light
+            dist/MUHAMAD KHOIRON-snake-dark.svg?palette=github-dark
+
+      - name: push MUHAMAD KHOIROJ-snake.svg to the snake branch
+        uses: crazy-max/ghaction-github-pages@v2.6.0
+        with:
+          target_branch: snake
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
