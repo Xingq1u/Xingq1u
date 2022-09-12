@@ -16,15 +16,15 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: generate MUHAMAD KHOIRON-snake.svg
+      - name: generate Xingq1u-snake.svg
         uses: Platane/snk/svg-only@v2
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/MUHAMAD KHOIRON-snake-light.svg?palette=github-light
-            dist/MUHAMAD KHOIRON-snake-dark.svg?palette=github-dark
+            dist/Xingq1u-snake-light.svg?palette=github-light
+            dist/Xingq1u-snake-dark.svg?palette=github-dark
 
-      - name: push MUHAMAD KHOIROJ-snake.svg to the snake branch
+      - name: push Xingq1uJ-snake.svg to the snake branch
         uses: crazy-max/ghaction-github-pages@v2.6.0
         with:
           target_branch: snake
