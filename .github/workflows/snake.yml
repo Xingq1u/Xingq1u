@@ -24,7 +24,7 @@ jobs:
             dist/Xingq1u-snake-light.svg?palette=github-light
             dist/Xingq1u-snake-dark.svg?palette=github-dark
 
-      - name: push Xingq1uJ-snake.svg to the snake branch
+      - name: push Xingq1u-snake.svg to the snake branch
         uses: crazy-max/ghaction-github-pages@v2.6.0
         with:
           target_branch: snake
