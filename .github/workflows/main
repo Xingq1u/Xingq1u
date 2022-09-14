@@ -15,7 +15,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           # Options
-          user: MUHAMAD KHOIRON
+          user: Xingq1u
           template: classic
           base: header, activity
           config_timezone: Asia/Jakarta
